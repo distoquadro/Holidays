@@ -2,6 +2,8 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const watch = require('gulp-watch');
+var cleanCSS = require('gulp-clean-css');
+
 
 gulp.task('compile',function(){
     return gulp.src('./scss/**/*.scss')
@@ -13,3 +15,16 @@ gulp.task('compile',function(){
 gulp.task('watch',function(){
     gulp.watch('./scss/**/*.scss',gulp.series('compile'))
 })
+
+ 
+gulp.task('clear-css', () => {
+    return gulp.src('css/*.css')
+      .pipe(cleanCSS({compatibility: 'ie8'}))
+      .pipe(gulp.dest('css'));
+  });
+  gulp.task('clear-js', () => {
+    return gulp.src('js/*script.js')
+      .pipe(cleanCSS({compatibility: 'ie8'}))
+      .pipe(gulp.dest('js'));
+  });
+ 

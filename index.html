@@ -38,6 +38,7 @@
                 </nav>
             </div>
             <div id="burg">
+                <a class="logo-mob" href="#">Private Holidays</a>
                 <a href="#">
                     <span class="bar" id="top"></span>
                     <span class="bar" id="middle"></span>
@@ -76,18 +77,18 @@
                 <form action="/login" method="post">
                     <label class="sel-name-one">
                         <select name="day">
-                            <option value="Mauritius" selected>Mauritius</option>
+                            <option value="Mauritius">Mauritius</option>
                             <option value="Thira">Thira</option>
                             <option value="Corfu">Corfu</option>
                             <option value="Bali">Bali</option>
                             <option value="Bora-bora">Bora-Bora</option>
                         </select>
                     </label>
-                    <label>
-                            <input type="text" id="datepicker" size="30">
+                    <label class="calend-first">
+                        <input type="text" id="datepicker" placeholder="24 Sep 2019">
                     </label>
-                    <label>
-                            <input type="text" id="datepicker-2">
+                    <label class="calend-second">
+                        <input  type="text" id="datepicker-2" placeholder="31 Sep 2019">
                     </label>
                     <label class="sel-name-two">
                         <select name="day">
@@ -142,6 +143,14 @@
                             <span>City Breaks</span>
                         </div>
                     </div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
             </div>
             </section>
             <section class="slider-location">
@@ -164,7 +173,7 @@
                                 </p>
                                 <span class="thalie-span-number-one">3</span>
                                 <span class="thalie-span-number-two">5</span>
-                                <span class="thalie-span-number-three">Beachfront</span>
+                                <span class="thalie-span-number-three"></span>
                                 <form action="/login" method="post">
                                     <button class="btn-now">Book now</button>
                                 </form>
@@ -239,6 +248,10 @@
                     <div class="item">2</div>
                     <div class="item">1</div>
                     <div class="item">2</div>
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item">1</div>
+                    <div class="item">2</div>
                 </div>
             </section>
             <section class="slider-diff">
@@ -269,6 +282,16 @@
                                 we will guide you and be at your back and call.</p>
                         </div>
                     </div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
                      
                 </div>
             </section>
@@ -364,7 +387,7 @@
                 <div class="destin-list">
                     <ul>
                         <li>
-                            <h4>Popular destinations</h4>
+                            <h4 class="title-pop">Popular destinations</h4>
                         </li>
                         <li>
                             <a href="#">Leh-Ladakh</a>
@@ -390,10 +413,6 @@
                         <li>
                             <a href="#">Agra</a>
                         </li>
-                    </ul>
-                </div>
-                <div class="list-coor">
-                    <ul>
                         <li>
                             <a href="#">Coorg</a>
                         </li>
