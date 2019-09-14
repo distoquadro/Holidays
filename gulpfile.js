@@ -3,6 +3,7 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const watch = require('gulp-watch');
 var cleanCSS = require('gulp-clean-css');
+var uglify = require('gulp-uglify');
 
 
 gulp.task('compile',function(){
@@ -20,11 +21,10 @@ gulp.task('watch',function(){
 gulp.task('clear-css', () => {
     return gulp.src('css/*style.css')
       .pipe(cleanCSS({compatibility: 'ie8'}))
-      .pipe(gulp.dest('mod'));
+      .pipe(gulp.dest('dist'));
   });
-  gulp.task('clear-js', () => {
-    return gulp.src('js/*script.js')
-      .pipe(cleanCSS({compatibility: 'ie8'}))
-      .pipe(gulp.dest('mod'));
+  gulp.task('gulp-uglify', function(){
+    gulp.src('js/*script.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('css/js'))
   });
- 
